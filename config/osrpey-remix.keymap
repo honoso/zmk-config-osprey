@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 &mt {
     flavor = "balanced";
@@ -30,8 +31,7 @@
         Left_Workspace: Left_Workspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_META &kp LCTRL &kp LEFT>, <&macro_tap>;
-
+            bindings = <&kt LEFT_META &kt LCTRL &kt LEFT>;
             label = "LEFT_WORKSPACE";
         };
 
@@ -60,7 +60,7 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&kp DELETE  &none      &Left_Workspace  &Right_Workspace  &none  &none   &kp CARET      &kp AMPS  &kp ASTRK  &kp N7  &kp N8  &kp N9
+&kp ESCAPE  &none      &Left_Workspace  &Right_Workspace  &none  &none   &kp CARET      &kp AMPS  &kp ASTRK  &kp N7  &kp N8  &kp N9
 &trans      &kp LC(A)  &none            &none             &none  &none   &kp BACKSLASH  &none     &none      &kp N4  &kp N5  &kp N6
 &trans      &none      &none            &none             &none  &none   &none          &none     &none      &kp N1  &kp N2  &kp N3
                                         &trans            &none  &trans  &trans         &mo 3     &kp N0
@@ -71,7 +71,7 @@
             display-name = "Raise";
             bindings = <
 &kp ESCAPE  &none  &none  &none   &none  &none   &none  &none     &kp UP_ARROW  &none            &none  &kp DELETE
-&trans      &none  &none  &none   &none  &none   &none  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &none  &none
+&none       &none  &none  &none   &none  &none   &none  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &none  &none
 &trans      &none  &none  &none   &none  &none   &none  &none     &none         &none            &none  &none
                           &trans  &mo 3  &trans  &mo 3  &none     &none
             >;
