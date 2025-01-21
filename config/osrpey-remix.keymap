@@ -26,6 +26,22 @@
         };
     };
 
+    macros {
+        Left_Workspace: Left_Workspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_ALT &kp UP_ARROW>;
+            label = "LEFT_WORKSPACE";
+        };
+
+        Right_Workspace: Right_Workspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_ALT &kp DOWN>;
+            label = "RIGHT_WORKSPACE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -42,10 +58,10 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&kp DELETE  &none      &kp LG(PAGE_UP)  &kp LG(PAGE_DOWN)  &none  &none   &kp CARET      &kp AMPS  &kp ASTRK  &kp N7  &kp N8  &kp N9
-&none       &kp LC(A)  &none            &none              &none  &none   &kp BACKSLASH  &none     &none      &kp N4  &kp N5  &kp N6
-&none       &none      &none            &none              &none  &none   &none          &none     &none      &kp N1  &kp N2  &kp N3
-                                        &none              &none  &trans  &trans         &mo 3     &kp N0
+&kp DELETE  &none      &Left_Workspace  &Right_Workspace  &none  &none   &kp CARET      &kp AMPS  &kp ASTRK  &kp N7  &kp N8  &kp N9
+&none       &kp LC(A)  &none            &none             &none  &none   &kp BACKSLASH  &none     &none      &kp N4  &kp N5  &kp N6
+&none       &none      &none            &none             &none  &none   &none          &none     &none      &kp N1  &kp N2  &kp N3
+                                        &none             &none  &trans  &trans         &mo 3     &kp N0
             >;
         };
 
