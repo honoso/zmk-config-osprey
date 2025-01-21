@@ -24,6 +24,11 @@
             bindings = <&kp MINUS>;
             key-positions = <17 16>;
         };
+
+        underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <16 15>;
+        };
     };
 
     keymap {
@@ -42,10 +47,10 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&kp ESCAPE  &kp DELETE  &kp LC(LG(LEFT))  &kp RG(RC(RIGHT))  &none  &none   &none     &kp UP_ARROW  &none      &kp N7  &kp N8  &kp N9
-&trans      &kp LC(A)   &kp RC(S)         &none              &none  &none   &kp LEFT  &kp DOWN      &kp RIGHT  &kp N4  &kp N5  &kp N6
-&trans      &none       &none             &none              &none  &none   &none     &none         &none      &kp N1  &kp N2  &kp N3
-                                          &none              &none  &trans  &trans    &mo 3         &kp N0
+&kp ESCAPE  &kp DELETE  &kp LC(LG(LEFT))  &kp RG(RC(RIGHT))  &none      &none   &none     &kp UP_ARROW  &none      &kp N7  &kp N8  &kp N9
+&trans      &kp LC(A)   &kp RC(S)         &none              &none      &none   &kp LEFT  &kp DOWN      &kp RIGHT  &kp N4  &kp N5  &kp N6
+&trans      &none       &none             &kp LC(C)          &kp LC(V)  &none   &none     &none         &none      &kp N1  &kp N2  &kp N3
+                                          &none              &none      &trans  &trans    &mo 3         &kp N0
             >;
         };
 
