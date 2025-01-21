@@ -30,14 +30,16 @@
         Left_Workspace: Left_Workspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_ALT &kp UP_ARROW>;
+            bindings = <&kp LEFT_META &kp A>, <&macro_tap>;
+
             label = "LEFT_WORKSPACE";
         };
 
         Right_Workspace: Right_Workspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LEFT_ALT &kp DOWN>;
+            bindings = <&kp LCTRL &kp LEFT_ALT &kp DOWN>, <&macro_tap>;
+
             label = "RIGHT_WORKSPACE";
         };
     };
