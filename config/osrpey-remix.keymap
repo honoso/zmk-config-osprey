@@ -30,7 +30,7 @@
         Left_Workspace: Left_Workspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_META &kp A>, <&macro_tap>;
+            bindings = <&kp LEFT_META &kp LCTRL &kp LEFT>, <&macro_tap>;
 
             label = "LEFT_WORKSPACE";
         };
