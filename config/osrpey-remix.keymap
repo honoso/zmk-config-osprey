@@ -35,7 +35,8 @@
         Task_View: Task_View {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp TAB>;
+            bindings = <&kp LEFT_GUI &kp TAB>, <&macro_press>;
+
             label = "TASK_VIEW";
         };
     };
