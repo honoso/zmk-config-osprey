@@ -35,7 +35,7 @@
         Write_Quit: Task_View {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp W &kp Q>;
+            bindings = <&kp ESCAPE &kp COLON &kp W &kp Q>;
             label = "TASK_VIEW";
         };
     };
