@@ -29,6 +29,11 @@
             bindings = <&kp UNDER>;
             key-positions = <16 15>;
         };
+
+        Backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <33 34>;
+        };
     };
 
     macros {
@@ -80,6 +85,15 @@
 &kp F1       &kp F2  &kp F3  &kp F4   &kp F5       &kp F6      &none   &none   &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_NEXT
 &kp F7       &kp F8  &kp F9  &kp F10  &kp F11      &kp F12     &none   &none   &none  &kp RIGHT_META  &kp RIGHT_SHIFT    &kp RCTRL
                              &none    &trans       &trans      &trans  &trans  &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
